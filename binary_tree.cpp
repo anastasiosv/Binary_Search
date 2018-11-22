@@ -19,13 +19,13 @@ struct node{
 	struct node *right;
 };
 
-int read_line (struct node *&);// CASE 1
-void insert (struct node *,struct node *&,int ,int ); //CASE 1,3
-void print (struct node *& ); //CASE 2
-void search (struct node *&,char []); //CASE 4
-void delete2(struct node*&); //CASE 5
-void delete1 (struct node *&,char []); //CASE 5
-void write_file(struct node *&); //CASE 6
+int read_line (struct node *&);
+void insert (struct node *,struct node *&,int ,int ); 
+void print (struct node *& ); 
+void search (struct node *&,char []); 
+void delete2(struct node*&); 
+void delete1 (struct node *&,char []); 
+void write_file(struct node *&); 
 void menu();
 
 int k=0;
@@ -105,7 +105,7 @@ int read_line(struct node *&n){
 	char sentence[250];
 
 	ifstream file; ///open file
-    file.open("test.txt");
+    	file.open("test.txt");
 
 	if (file.is_open()) ///check
 		cout << "File Open: Checked" << endl;
